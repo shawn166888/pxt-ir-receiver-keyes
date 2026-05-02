@@ -10,7 +10,7 @@
     "files": [
         "README.md",
         "infrared-receiver.ts",
-        "_locales/cn/Keyes-IR-Receiver-strings.json",
+        "_locales/zh/Keyes-IR-Receiver-strings.json",
         "_locales/de/Keyes-IR-Receiver-strings.json",
         "_locales/cs/Keyes-IR-Receiver-strings.json"
     ],
