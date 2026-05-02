@@ -127,12 +127,16 @@ namespace makerbit {
   }
 
   function decode(markAndSpace: number): number {
-    basic.showNumber(2);
+    basic.showNumber(markAndSpace);
+    // 560us + 560 us = 1.12
+    // 560us + 1690 us = 2.25ms
     if (markAndSpace < 1600) {
       // low bit
+      basic.showString("f");
       return appendBitToDatagram(0);
     } else if (markAndSpace < 2700) {
       // high bit
+      basic.showString("t");
       return appendBitToDatagram(1);
     }
 
@@ -140,11 +144,14 @@ namespace makerbit {
 
     if (markAndSpace < 12500) {
       // Repeat detected
+      basic.showString("r");
       return IR_REPEAT;
     } else if (markAndSpace < 14500) {
       // Start detected
+      basic.showString("i");
       return IR_INCOMPLETE;
     } else {
+      basic.showString("I");
       return IR_INCOMPLETE;
     }
   }
