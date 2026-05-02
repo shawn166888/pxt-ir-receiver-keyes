@@ -31,7 +31,7 @@
   "makerbit.onIrButton|block": "on IR button | %button | %action",
   "makerbit.onIrDatagram|block": "on IR datagram received",
   "makerbit.wasIrDataReceived|block": "IR data was received",
-  "makerbit|block": "MakerBit",
-  "{id:category}Makerbit": "Makerbit",
+  "makerbit|block": "KKBit",
+  "{id:category}Makerbit": "KK1Bit",
   "{id:subcategory}IR Receiver": "IR Receiver"
 }
