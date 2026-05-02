@@ -1,5 +1,5 @@
 // MakerBit blocks supporting a Keyestudio Infrared Wireless Module Kit
-// (receiver module+remote controller) v1
+// (receiver module+remote controller) v1.1
 
 const enum IrButton {
   //% block="any"
@@ -144,14 +144,14 @@ namespace makerbit {
 
     if (markAndSpace < 12500) {
       // Repeat detected
-      datalogger.log(datalogger.createCV("debug", r));
+      datalogger.log(datalogger.createCV("debug", "r"));
       return IR_REPEAT;
     } else if (markAndSpace < 14500) {
       // Start detected
-      datalogger.log(datalogger.createCV("debug", s));
+      datalogger.log(datalogger.createCV("debug", "s"));
       return IR_INCOMPLETE;
     } else {
-      datalogger.log(datalogger.createCV("debug", i));
+      datalogger.log(datalogger.createCV("debug", "i"));
       return IR_INCOMPLETE;
     }
   }
