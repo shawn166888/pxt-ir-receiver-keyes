@@ -127,6 +127,7 @@ namespace makerbit {
   }
 
   function decode(markAndSpace: number): number {
+    basic.showNumber(2);
     if (markAndSpace < 1600) {
       // low bit
       return appendBitToDatagram(0);
@@ -153,7 +154,7 @@ namespace makerbit {
 
     let mark = 0;
     let space = 0;
-
+    basic.showNumber(1);
     pins.onPulsed(pin, PulseValue.Low, () => {
       // HIGH, see https://github.com/microsoft/pxt-microbit/issues/1416
       mark = pins.pulseDuration();
@@ -176,7 +177,7 @@ namespace makerbit {
     if (irEvent === IR_DATAGRAM || irEvent === IR_REPEAT) {
       irState.repeatTimeout = input.runningTime() + REPEAT_TIMEOUT_MS;
     }
-
+    basic.showNumber(3);
     if (irEvent === IR_DATAGRAM) {
       irState.hasNewDatagram = true;
 
@@ -250,7 +251,7 @@ namespace makerbit {
     }
 
     irState.protocol = protocol;
-
+    basic.showNumber(0);
     enableIrMarkSpaceDetection(pin);
 
     background.schedule(notifyIrEvents, background.Thread.Priority, background.Mode.Repeat, REPEAT_TIMEOUT_MS);
