@@ -120,3 +120,4 @@ Licensed under the MIT License (MIT). See LICENSE file for more details.
 
 - for PXT/microbit
 - for PXT/calliope
+https://github.com/shawn166888/pxt-makerbit-ir-receiver
