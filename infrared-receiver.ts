@@ -170,8 +170,9 @@ namespace makerbit {
     pins.onPulsed(pin, PulseValue.High, () => {
       // LOW
       space = pins.pulseDuration();
+      
       const status = decode(mark + space);
-
+      datalogger.log(datalogger.createCV("debug", mark));
       if (status !== IR_INCOMPLETE) {
         handleIrEvent(status);
       }
